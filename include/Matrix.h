@@ -10,6 +10,7 @@ class Matrix {
     public:
         Matrix(int rows, int cols, double initialValue = 0.0);
 
+        void display() const;
         int getRows() const;
         int getCols() const;
         double at(int row, int col) const;

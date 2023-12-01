@@ -1,7 +1,17 @@
 #include "Matrix.h"
+#include <iostream>
 
 Matrix::Matrix(int rows, int cols, double initialValue) {
     data.resize(rows, std::vector<double>(cols, initialValue));
+}
+
+void Matrix::display() const {
+    for (int i = 0; i < getRows(); i++) {
+        for (int j = 0; j < getCols(); j++) {
+            std::cout << at(i, j) << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 int Matrix::getRows() const {
